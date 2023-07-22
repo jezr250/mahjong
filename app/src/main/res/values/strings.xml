@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">mahjong</string>
+    <string-array name="yaku_array">
+        <item>1役</item>
+        <item>2役</item>
+        <item>3役</item>
+        <item>4役</item>
+        <item>5役</item>
+        <item>6役</item>
+        <item>7役</item>
+        <item>8役</item>
+        <item>9役</item>
+        <item>10役</item>
+        <item>11役</item>
+        <item>12役</item>
+        <item>13役</item>
+    </string-array>
+</resources>
