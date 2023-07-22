@@ -33,7 +33,7 @@
         android:id="@+id/Pinfu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="※ 平和・ツモの場合は基本符20符のみ、ツモ2符は無し！" />
+        android:text="※平和・ツモの場合は基本符20符のみ、ツモ2符は無し！" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
