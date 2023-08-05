@@ -34,5 +34,23 @@
         android:onClick="goToMainActivity"
         android:text="戻る" />
 
+    <Spinner
+        android:id="@+id/spinnerMenzen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:entries="@array/Menzen"
+        android:spinnerMode="dialog"
+        android:padding="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerNaki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:entries="@array/Naki"
+        android:padding="16dp"
+        android:spinnerMode= "dialog"/>
+
 
 </LinearLayout>

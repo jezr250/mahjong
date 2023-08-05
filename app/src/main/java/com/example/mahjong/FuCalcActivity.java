@@ -10,6 +10,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.content.Intent;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class FuCalcActivity extends AppCompatActivity {
 
@@ -156,7 +157,20 @@ public class FuCalcActivity extends AppCompatActivity {
     }
 
     public void goToScoreTableActivity(View view) {
-        int totalFu = Integer.parseInt(textViewTotalFu.getText().toString());
+        String totalFuText = textViewTotalFu.getText().toString();
+        int totalFu;
+
+        if (totalFuText.isEmpty()) {
+            totalFu = 0; // もし入力が空なら0を代入する
+        } else {
+            try {
+                totalFu = Integer.parseInt(totalFuText);
+            } catch (NumberFormatException e) {
+                // 数値に変換できない場合はエラーとして処理
+                Toast.makeText(this, "入力に誤りがあります", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
 
         if (totalFu == 30) {
             Intent intent = new Intent(this, ScoreTableActivity.class);
@@ -182,9 +196,9 @@ public class FuCalcActivity extends AppCompatActivity {
         } else if (totalFu == 100) {
             Intent intent = new Intent(this, Score1100Activity.class);
             startActivity(intent);
-        } else if (totalFu == 110) {
-            Intent intent = new Intent(this, Score1110Activity.class);
-            startActivity(intent);
+        } else {
+            // If the input does not match any of the expected values, show an error message
+            Toast.makeText(this, "入力に誤りがあります", Toast.LENGTH_SHORT).show();
         }
     }
     public void goToYakuActivity(View view) {
